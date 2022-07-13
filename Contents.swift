@@ -22,7 +22,7 @@ struct Algorithms{
         return date24
     }
     ///timeConversion(s: "07:05:45PM")
-    //nt
+    //ntt
 }
 
 class AlgorithmsTests: XCTestCase {
