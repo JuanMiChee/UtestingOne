@@ -21,8 +21,6 @@ struct Algorithms{
         print(date24)
         return date24
     }
-    /////timeConversion(s: "07:05:45PM")
-    //a
 }
 
 class AlgorithmsTests: XCTestCase {
