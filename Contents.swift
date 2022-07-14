@@ -75,4 +75,28 @@ class AlgorithmsTests: XCTestCase {
         // Then
         XCTAssertEqual(result, "06:05:45")
     }
+    
+    func test5() {
+        // Given
+        let hour = "12:00:00AM"
+        
+        //When
+        let result = algorithms.timeConversion(s: hour)
+        
+        // Then
+        XCTAssertEqual(result, "00:00:00")
+    }
+    
+    func test6() {
+        // Given
+        let hour = "12:00:00PM"
+        
+        //When
+        let result = algorithms.timeConversion(s: hour)
+        
+        // Then
+        XCTAssertEqual(result, "12:00:00")
+    }
 }
+
+AlgorithmsTests.defaultTestSuite.run()
