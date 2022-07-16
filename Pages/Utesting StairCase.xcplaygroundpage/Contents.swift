@@ -2,7 +2,7 @@ import Foundation
 import XCTest
 import Foundation
 
-///* This algorithim if for count how many time is the biggest value (a candle in this case) is repeated */
+///* This algorithim is for count how many time is the biggest value (a candle in this case) repeated */
 
 /*
  Given five positive integers, find the minimum and maximum values that
