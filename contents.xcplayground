@@ -3,6 +3,7 @@
     <pages>
         <page name='UtestingStudentGrade'/>
         <page name='Utesting TimeConvertion'/>
-        <page name='Utesting StairCase'/>
+        <page name='Utesting MinMaxSum'/>
+        <page name='Utesting candlesCounter'/>
     </pages>
 </playground>
