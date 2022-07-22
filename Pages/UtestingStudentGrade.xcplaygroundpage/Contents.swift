@@ -41,25 +41,22 @@ struct Algorithms{
     func gradingStudents(grades: [Int]) -> [Int] {
         var finalGrades: [Int] = []
         
-        for number in grades{
-            let num = number + 2
-            let numTwo = number + 1
-            
-            if num >= 39{
-                if num % 5 == 0{
-                    finalGrades.append(num)
-                    
-                }else if numTwo % 5 == 0{
-                    
-                    finalGrades.append(num - 1)
+        grades.map { str in
+                let num = str + 2
+                let numTwo = str + 1
+                if num >= 39{
+                    if num % 5 == 0{
+                        finalGrades.append(num)
+                    }else if numTwo % 5 == 0{
+                        finalGrades.append(num - 1)
+                    }else{
+                        finalGrades.append(str)
+                    }
                 }else{
-                    finalGrades.append(number)
+                    finalGrades.append(str)
                 }
-            }else{
-                finalGrades.append(number)
-            }
-            
         }
+        
         //print(finalGrades)
         return finalGrades
     }
@@ -74,7 +71,7 @@ class AlgorithmsTests: XCTestCase {
     }
     
     
-    func normalCaseTests() {
+    func testNormalCaseTests() {
         // Given
         let givenGrade = [84,26,57]
         
@@ -85,7 +82,7 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertEqual(result, [85,26,57])
     }
     
-    func moreThanThreeValues() {
+    func testMoreThanThreeValues() {
         // Given
         let givenGrade = [73,67,38,33]
         
@@ -96,7 +93,7 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertEqual(result, [75,67,40,33])
     }
     
-    func aVeryBigArray() {
+    func testAVeryBigArray() {
         // Given
         let givenGrade = [44,84,94,21,0,18,100,18,62,30,61,53,0,43,2,29,53,61,40,14]
         

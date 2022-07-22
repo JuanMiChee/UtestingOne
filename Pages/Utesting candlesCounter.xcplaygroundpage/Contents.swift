@@ -30,13 +30,12 @@ struct Algorithm{
     func biggerBirthdayCakeCandlesCounter(candles: [Int]) -> Int {
         var counter = 0
         let maxNumber = candles.max()
-
-        for number in candles{
-            if number == maxNumber!{
+        
+        candles.forEach { word in
+            if word == maxNumber!{
                 counter = counter + 1
             }
         }
-
         return counter
     }
 }

@@ -1,8 +1,5 @@
-//: [Previous](@previous)
-
 import Foundation
 import XCTest
-import Foundation
 
 ///* This algorithim is for get the maximum sumatory value, and the minimum value given the array elements */
 /*
@@ -18,20 +15,12 @@ import Foundation
  Then the funciton should return [16,24]
  */
 
-
-
 struct Algorithms{
     func miniMaxSum(arr: [Int]) -> [Int] {
         let minimum = arr.min()
         let maximum = arr.max()
+        let actualSumatory = arr.reduce(0, +)
         
-        var actualSumatory = 0
-        for number in arr{
-            actualSumatory = number + actualSumatory
-            
-        }
-        
-        print(actualSumatory - maximum!, actualSumatory - minimum!)
         let lastValueOne = actualSumatory - maximum!
         let lastValueTwo = actualSumatory - minimum!
         let returnValue: [Int] = [lastValueOne, lastValueTwo]
@@ -52,7 +41,7 @@ class AlgorithmsTests: XCTestCase {
     }
     
     
-    func smallestSumatoryCase() {
+    func testNormalArray() {
         // Given
         let givenArray = [1,3,3,2]
         
@@ -63,24 +52,24 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertEqual(result, [6,8])
     }
     
-    func giggestSumatoryCase() {
+    func testBiggestSumatoryCase() {
         // Given
         let givenArray = [44,84,94,21,0,18,100,18,62,100,61,53,0,43,2,100,53,61,40,14]
 
         //When
         let result = algorithms.miniMaxSum(arr: givenArray)
-        
+
         // Then
         XCTAssertEqual(result, [868, 968])
     }
-    
-    func aLotOfRepeatedValues() {
+
+    func testALotOfRepeatedValues() {
         // Given
         let givenArray = [1,2,3,4,4,4]
 
         //When
         let result = algorithms.miniMaxSum(arr: givenArray)
-        
+
         // Then
         XCTAssertEqual(result, [14,17])
     }
